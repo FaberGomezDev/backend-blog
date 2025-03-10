@@ -19,7 +19,7 @@ const ArticleSchema = Schema({
     },
     image:{
         type: String,
-        default: "default.png"
+        default: "https://res.cloudinary.com/dllbgwjij/image/upload/v1698674430/BLOG/default/dubzxmuuiszutvuzk1ni.jpg"
 
     }
 });

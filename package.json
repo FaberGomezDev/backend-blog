@@ -8,7 +8,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "JVdeveloper2023",
+  "author": "FaberGomezDev",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",

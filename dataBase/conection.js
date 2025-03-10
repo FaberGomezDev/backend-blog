@@ -22,14 +22,13 @@ const mongoose = require('mongoose');
 
 async function conection() {
     try {
-        const uri = `mongodb://devfabergomez:${process.env.MONGODB_ATLAS_PASS}/?ssl=true&replicaSet=atlas-p83n4j-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster1`;
+        const uri = `mongodb+srv://devfabergomez:${process.env.MONGODB_ATLAS_PASS}@cluster1.mongodb.net/db-blog?retryWrites=true&w=majority&appName=Cluster1`;
         await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log('Conexion exitosa a la base de datos db-blog en MongoDB Atlas');
     } catch (err) {
         console.error('No se pudo conectar a la base de datos db-blog', err);
     }
 }
-
 
 module.exports = {
     conection

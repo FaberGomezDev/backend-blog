@@ -22,7 +22,7 @@ const mongoose = require('mongoose');
 
 async function conection() {
     try {
-        const uri = `mongodb+srv://FaberGomez:${process.env.MONGODB_ATLAS_PASS}@clusterfg.77oh3.mongodb.net/?retryWrites=true&w=majority&appName=ClusterFG`;
+        const uri = `mongodb://devfabergomez:${process.env.MONGODB_ATLAS_PASS}/?ssl=true&replicaSet=atlas-p83n4j-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster1`;
         await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log('Conexion exitosa a la base de datos db-blog en MongoDB Atlas');
     } catch (err) {
